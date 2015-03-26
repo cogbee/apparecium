@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"name":"HttpClient.execute(...)", "group":"1"},
+        {"name":"SkeletonActivity", "group":"0"},
+        {"name":"Lorg/apache/http/HttpResponse; getEntity ()Lorg/apache/http/HttpEntity;", "group":"2"},
+        {"name":"Lorg/apache/http/util/EntityUtils; toString (Lorg/apache/http/HttpEntity;)Ljava/lang/String;", "group":"2"}
+    ],
+    "links":[
+        {"source":0, "target":1, "type":"call"},
+        {"source":1, "target":2, "type":"call"},
+        {"source":1, "target":3, "type":"call"}
+    ]
+}

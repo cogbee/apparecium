@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<title>Data Flow</title>
+<script src="d3.v2.min.js"></script>
+<style>
+
+body {
+  font: 13px sans-serif;
+  position: relative;
+}
+
+.node {
+  stroke: #333;
+  stroke-width: 1.5px;
+  cursor: crosshair;
+}
+
+.link {
+  stroke: #999;
+  stroke-width: 2;
+  cursor: crosshair;
+}
+marker {
+  fill: #999;
+}
+
+#chart {
+  box-shadow: 5px 5px 2px #888;
+  border:2px solid #999;
+}
+
+.node text {
+  fill: #000;
+  stroke: none;
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+.node text.shadow {
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-opacity: .8;
+}
+
+.tooltip {
+  background: #eee;
+  /*width: 200px;*/
+  box-shadow: 5px 5px 2px #888;
+  border:2px solid #999;
+  border-radius:3px;
+  padding: 3px 5px;
+}
+#selector {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+}
+</style>
+<head>
+<body>
+  <div id="selector">
+    <select id="select_file" onchange="document.location='/index.html?'+this.value">
+      <option></option>
+    </select>
+  </div>
+  <div id="chart">
+  </div>
+<script src="dataflow.js"></script>
+<script type="text/javascript">
+  var dd = document.getElementById('select_file');
+  var sel = window.location.search.replace( "?", "" );
+  if (sel === '') {
+    dd.options[6].defaultSelected = true;
+  } else {
+    for (var i = 0; i < dd.options.length; i++) {
+        if (dd.options[i].text === sel) {
+            dd.options[i].defaultSelected = true;
+            break;
+        }
+    }
+  }
+</script>
+</body>
+</html>

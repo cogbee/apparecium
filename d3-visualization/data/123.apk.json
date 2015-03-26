@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"name":"TelephonyManager.getDeviceId(...)", "group":"1"},
+        {"name":"Lcom/baidu/location/c; a (Landroid/telephony/CellLocation;)V", "group":"0"},
+        {"name":"Lcom/baidu/location/c; do ()V", "group":"0"},
+        {"name":"Lcom/baidu/location/j; a (Ljava/lang/String; Ljava/lang/String;)V", "group":"0"},
+        {"name":"Landroid/util/Log; d (Ljava/lang/String; Ljava/lang/String;)I", "group":"2"}
+    ],
+    "links":[
+        {"source":0, "target":1, "type":"call"},
+        {"source":0, "target":2, "type":"call"},
+        {"source":1, "target":2, "type":"static"},
+        {"source":2, "target":3, "type":"call"},
+        {"source":3, "target":4, "type":"call"}
+    ]
+}
