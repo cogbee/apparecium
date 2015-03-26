@@ -27,3 +27,16 @@ on widows
 Just change it based on your Graphviz installation directory.
 
 you can see it at this page:https://code.google.com/p/pydot/issues/detail?id=65
+
+
+fix:
+----------------------------------
+
+1、create methods if it is not exists
+
+2、replace '<、>' to '_' so we can use it to name a file on windows
+
+3、comment os.remove(filename).this should not show here.
+
+all is at line 2392 to 2408.
+
